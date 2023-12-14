@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 User=ubuntu
 Type=simple
-ExecStart=/home/ubuntu/monitor_active_set.sh
+ExecStart=/home/ubuntu/snowman-active-set-monitor/monitor_active_set.sh
 Restart=on-failure
 RestartSec=30s
 StandardOutput=syslog
