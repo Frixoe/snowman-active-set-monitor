@@ -1,0 +1,17 @@
+[Unit]
+Description=Active Set Monitoring Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+Type=simple
+ExecStart=/home/ubuntu/monitor_active_set.sh
+Restart=on-failure
+RestartSec=30s
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=active-set-monitor
+
+[Install]
+WantedBy=multi-user.target
